@@ -3,6 +3,7 @@
 :root {
   --color-dark: #272a31;
   --color-coral: #ec5242;
+  --text-coral: #F44C06;
   --bg-gray: #d3d3d3;
   --text-gray: #909090;
   --text-darkgray: #565656;
@@ -33,6 +34,7 @@ header {
   width: 100%;
   margin: 0;
   padding: 0;
+  background: #fff;
 }
 
 .toplinks,
@@ -47,6 +49,7 @@ header {
 }
 
 .hamburger {
+  position: relative;
   display: flex;
   align-items: center;
   font-size: 55px;
@@ -56,9 +59,56 @@ header {
 }
 
 .banner {
-  height: 87vh;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   margin-top: 13vh;
   background: var(--bg-gray);
+  /*background: url(./images/marvel-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;*/
+}
+
+.banner-content {
+  flex: 0.8;
+  height: auto;
+  padding: 40px 0;
+  font-weight: 700;
+  color: var(--text-darkgray);
+}
+
+.banner-content h1 {
+  font-weight: 900;
+  color: var(--text-coral);
+  background: url("./images/marvel-cinematic-universe-heroes3.jpg") no-repeat center center;
+  background-size: fill;
+  background-clip: content-box;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 42px;
+}
+
+.banner-content h2 {
+  font-weight: 900;
+}
+
+.banner-content h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-greeting {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-coral);
+}
+
+.banner-description {
+  width: 100%;
+  padding: 10px 20px;
+  border: 2px solid #dbdbdb;
 }
 
 @media only screen and (min-width: 768px) {
@@ -144,5 +194,21 @@ header {
     border: 2px solid var(--color-coral);
     padding: 8px 12px;
     background: none;
+  }
+
+  .banner {
+    height: 87vh;
+  }
+
+  .banner-content {
+    padding: 0;
+  }
+
+  .banner-content h1 {
+    font-size: 52px;
+  }
+
+  .banner-description {
+    width: 60%;
   }
 }
