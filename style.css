@@ -3,7 +3,7 @@
 :root {
   --color-dark: #272a31;
   --color-coral: #ec5242;
-  --text-coral: #F44C06;
+  --text-coral: #f44c06;
   --bg-gray: #d3d3d3;
   --text-gray: #909090;
   --text-darkgray: #565656;
@@ -64,9 +64,10 @@ header {
   height: 100vh;
   margin-top: 13vh;
   background: var(--bg-gray);
-  /*background: url(./images/marvel-background.png);
+
+  /* background: url(./images/marvel-background.png);
   background-repeat: no-repeat;
-  background-size: cover;*/
+  background-size: cover; */
 }
 
 .banner-content {
@@ -81,7 +82,7 @@ header {
   font-weight: 900;
   color: var(--text-coral);
   background: url("./images/marvel-cinematic-universe-heroes3.jpg") no-repeat center center;
-  background-size: fill;
+  background-size: cover;
   background-clip: content-box;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -112,7 +113,7 @@ header {
 }
 
 @media only screen and (min-width: 768px) {
-    /* Desktop [768px -> 1220px] */
+  /* Desktop [768px -> 1220px] */
   .hamburger {
     display: none;
   }
