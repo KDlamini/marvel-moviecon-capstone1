@@ -13,6 +13,7 @@
 body {
   margin: 0;
   padding: 0;
+  height: auto;
   font-family: Lato, sans-serif;
   font-style: normal;
   flex-direction: column;
@@ -35,6 +36,7 @@ header {
   margin: 0;
   padding: 0;
   background: #fff;
+  z-index: 3;
 }
 
 .toplinks,
@@ -44,7 +46,8 @@ header {
 
 .toplinks,
 .logo-container,
-.menu-list {
+.menu-list,
+.main-program a {
   display: none;
 }
 
@@ -61,13 +64,9 @@ header {
 .banner {
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 13vh;
-  background: var(--bg-gray);
-
-  /* background: url(./images/marvel-background.png);
-  background-repeat: no-repeat;
-  background-size: cover; */
+  background-color: rgb(211, 211, 211, 0.8);
 }
 
 .banner-content {
@@ -76,6 +75,7 @@ header {
   padding: 40px 0;
   font-weight: 700;
   color: var(--text-darkgray);
+  z-index: 2;
 }
 
 .banner-content h1 {
@@ -112,9 +112,62 @@ header {
   border: 2px solid #dbdbdb;
 }
 
+/* Main Program Section */
+.main-program {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 50px 20px;
+  color: #fff;
+  background: rgb(39, 41, 48, 0.8);
+}
+
+.program-card-wrapper {
+  flex-direction: column;
+}
+
+.program-card {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5px;
+  list-style: none;
+  padding: 12px;
+  background: #3c3f46;
+}
+
+.program-image {
+  width: 15%;
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.program-title {
+  width: 20%;
+  color: var(--color-coral);
+}
+
+.program-text {
+  width: 50%;
+  text-align: left;
+}
+
+.program-btn {
+  font-weight: 600;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 20px 40px;
+  background: var(--color-coral);
+  border: none;
+}
+
 @media only screen and (min-width: 768px) {
   /* Desktop [768px -> 1220px] */
-  .hamburger {
+  .hamburger,
+  .program-btn {
     display: none;
   }
 
@@ -151,7 +204,10 @@ header {
   }
 
   .toplinks-item:hover,
-  .toplinks-item .icon {
+  .toplinks-item .icon,
+  .logo-container,
+  .menu-list li,
+  .campaign-btn {
     cursor: pointer;
   }
 
@@ -198,7 +254,37 @@ header {
   }
 
   .banner {
-    height: 87vh;
+    margin-top: 11vh;
+    min-height: 87vh;
+  }
+
+  .banner::before {
+    content: "";
+    background: url("./images/banner-background.jpg");
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 98vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .banner::after {
+    content: "";
+    background: url("./images/Scarlet-no-bg.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 120%;
+    transform: scaleX(-1);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 98vh;
+    position: absolute;
+    z-index: 1;
   }
 
   .banner-content {
@@ -211,5 +297,51 @@ header {
 
   .banner-description {
     width: 60%;
+  }
+
+  /* Main Program Section */
+  .main-program {
+    height: 480px;
+  }
+
+  .program-header::before {
+    content: "";
+    position: absolute;
+    left: 48%;
+    bottom: -90px;
+    height: 1px;
+    width: 50px;
+    border-bottom: 2px solid var(--color-coral);
+  }
+
+  .main-program a {
+    display: block;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .program-card-wrapper {
+    flex-direction: row;
+  }
+
+  .program-card {
+    flex-direction: column;
+    width: 180px;
+    height: 220px;
+  }
+
+  .program-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .program-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .program-text {
+    width: 100%;
+    text-align: center;
   }
 }
