@@ -1,0 +1,84 @@
+:root {
+  --color-dark: #272a31;
+  --color-coral: #ec5242;
+  --text-coral: #f44c06;
+  --bg-gray: #d3d3d3;
+  --text-gray: #909090;
+  --text-darkgray: #565656;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  flex-direction: column;
+}
+
+/* About home Section Mobile */
+.banner-content {
+  text-align: center;
+}
+
+.banner-content h1 {
+  text-align: center;
+  background: var(--color-coral);
+  background-clip: content-box;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.banner-content h4 {
+  margin-top: 0;
+}
+
+.banner-content h4 .chevron.icon {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+}
+
+.banner-description {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.banner-description,
+.banner-contact-info {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.banner-contact-info {
+  margin-bottom: 0;
+}
+
+.banner::after {
+  display: none;
+}
+
+/* About Footer Section Mobile */
+.footer {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Desktop [768px -> 1220px] */
+  .banner-greeting,
+  .partners {
+    display: none;
+  }
+
+  .banner-description {
+    width: 80%;
+  }
+
+  /* About Footer Section Desktop */
+  .bottom-footer {
+    background: var(--color-dark);
+  }
+
+  .bottom-footer-text {
+    color: #fff;
+  }
+}
