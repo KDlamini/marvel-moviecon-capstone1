@@ -9,7 +9,7 @@
   --text-darkgray: #565656;
 }
 
-/* Mobile First Design */
+/* Mobile First Design Homepage */
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +27,7 @@ body {
   align-self: stretch;
 }
 
+/* Homepage */
 header {
   flex-direction: column;
   position: fixed;
@@ -40,7 +41,8 @@ header {
 }
 
 .toplinks,
-.menu-list {
+.menu-list,
+.creators-list {
   list-style: none;
 }
 
@@ -87,10 +89,12 @@ header {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-size: 42px;
+  text-transform: uppercase;
 }
 
 .banner-content h2 {
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .banner-content h4 {
@@ -112,7 +116,7 @@ header {
   border: 2px solid #dbdbdb;
 }
 
-/* Main Program Section */
+/* Main Program Section Mobile */
 .main-program {
   flex-direction: column;
   align-items: center;
@@ -120,7 +124,7 @@ header {
   height: auto;
   padding: 50px 20px;
   color: #fff;
-  background: rgb(39, 41, 48, 0.8);
+  background: var(--color-dark);
 }
 
 .program-card-wrapper {
@@ -139,13 +143,15 @@ header {
 }
 
 .program-image {
-  width: 15%;
   font-size: 32px;
+  padding: 5px;
   margin-top: 10px;
 }
 
 .program-title {
-  width: 20%;
+  width: 35%;
+  text-align: center;
+  padding: 5px;
   color: var(--color-coral);
 }
 
@@ -164,10 +170,89 @@ header {
   border: none;
 }
 
+/* Featured Creators Section Mobile */
+.featured-creators {
+  flex-direction: column;
+}
+
+.featured-creators h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 40px 0 20px 0;
+}
+
+.creators-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  padding: 0 4vw;
+}
+
+.creator {
+  margin: 0;
+}
+
+.creator-img-wrapper {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  max-height: 180px;
+  max-width: 180px;
+  background: url(./images/Disney-slate.png);
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.creator-img-wrapper img {
+  display: block;
+  width: 85%;
+  height: 85%;
+}
+
+.creator-info {
+  flex: 1.8;
+  height: auto;
+  padding: 10px;
+}
+
+.creator-name {
+  font-size: 1.4rem;
+  color: var(--color-dark);
+}
+
+.creator-title {
+  font-size: 1.1rem;
+  color: var(--color-coral);
+  font-style: italic;
+}
+
+.creator-description {
+  color: var(--color-dark);
+}
+
+.more-creators-btn {
+  align-items: center;
+  justify-content: center;
+  margin: auto 4vw;
+  padding: 20px;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  border: 1px solid var(--text-gray);
+  border-radius: 3px;
+}
+
+.more-creators-btn .chevron.icon {
+  color: var(--color-coral);
+  margin: auto 5px;
+}
+
 @media only screen and (min-width: 768px) {
   /* Desktop [768px -> 1220px] */
   .hamburger,
-  .program-btn {
+  .program-btn,
+  .more-creators-btn {
     display: none;
   }
 
@@ -299,7 +384,7 @@ header {
     width: 60%;
   }
 
-  /* Main Program Section */
+  /* Main Program Section Desktop */
   .main-program {
     height: 480px;
   }
@@ -343,5 +428,12 @@ header {
   .program-text {
     width: 100%;
     text-align: center;
+  }
+
+  /* Featured Creators Section Desktop */
+  .creators-list {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
   }
 }
