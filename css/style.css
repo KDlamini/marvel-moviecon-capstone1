@@ -258,6 +258,10 @@ header {
   margin: 0;
 }
 
+.creator.hide {
+  display: none;
+}
+
 .creator-img-wrapper {
   flex: 1;
   align-items: flex-end;
@@ -593,6 +597,10 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
     padding: 0 10vw;
+  }
+
+  .creator.hide {
+    display: flex;
   }
 
   /* Footer Desktop */
