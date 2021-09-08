@@ -15,6 +15,10 @@ menuItems.forEach((menuItem) => {
     menuItems.forEach((Item) => { Item.classList.remove('active'); });
     menuList.classList.remove('active');
     menuItem.classList.add('active');
+
+    if (menuItem.textContent === 'Program' && !body.classList.contains('homepage')) {
+      localStorage.setItem(menuItem.textContent, 'active');
+    }
   });
 });
 
@@ -24,3 +28,10 @@ window.addEventListener('resize', () => {
     window.location.reload();
   }
 });
+
+window.onload = () => {
+  if (localStorage.getItem('Program') !== null) {
+    menuItems[3].classList.add(localStorage.getItem('Program'));
+    localStorage.removeItem('Program');
+  }
+};
