@@ -9,7 +9,7 @@
     <script defer src="./main.js"></script>
     <title>Marvel Studios MovieCon</title>
 </head>
-<body class="d-flex">
+<body class="d-flex homepage">
     <!-- Navigation Panel -->
     <header class="d-flex flex-stretch">
         <ul class="toplinks d-flex flex-stretch">
@@ -32,11 +32,13 @@
                 </div>
             </div>
             <ul class="menu-list d-flex">
-                <li><a href="./pages/about.html">About</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Sponsor</a></li>
-                <li><a href="#">News</a></li>
+                <li class="menu-close-btn"><i class="times menu-item"></i></li>
+                <li><a class="menu-item home" href="./index.html">Home</a></li>
+                <li><a class="menu-item" href="./pages/about.html">About</a></li>
+                <li><a class="menu-item" href="./index.html#program">Program</a></li>
+                <li><a class="menu-item" href="#">Join</a></li>
+                <li><a class="menu-item" href="./pages/about.html#sponsor">Sponsor</a></li>
+                <li><a class="menu-item" href="#">News</a></li>
                 <li>
                     <button type="button" class="campaign-btn">Get Tickets</button>
                 </li>
@@ -62,7 +64,7 @@
     </section>
 
     <!-- Main Program Section -->
-    <section class="main-program d-flex flex-stretch">
+    <section class="main-program d-flex flex-stretch" id="program">
         <h2 class="program-header">Main Program</h2>
         <div class="program-card-wrapper d-flex">
             <ul class="program-card d-flex">

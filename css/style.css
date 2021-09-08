@@ -73,6 +73,47 @@ header {
   background: none;
 }
 
+.menu-list.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: var(--color-white);
+  background: var(--color-dark);
+  animation: slide-in 0.8s ease-in-out both;
+}
+
+.menu-list.active .campaign-btn {
+  display: none;
+}
+
+.menu-list.active li {
+  margin: 15px 0;
+}
+
+.menu-list.active .menu-close-btn {
+  width: 100%;
+  padding: 20px 40px;
+  text-align: right;
+}
+
+.menu-list .times.icon {
+  font-size: 32px;
+}
+
+.menu-list.active a {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.menu-list.active a:hover {
+  color: var(--color-coral);
+}
+
 .banner {
   align-items: center;
   justify-content: center;
@@ -324,10 +365,24 @@ header {
   color: var(--color-dark);
 }
 
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   /* Desktop [768px -> 1220px] */
   .hamburger,
   .program-btn,
+  .menu-close-btn,
+  .menu-item.home,
   .more-creators-btn {
     display: none;
   }
@@ -415,6 +470,10 @@ header {
     padding-right: 12vw;
     margin: 0;
     text-transform: capitalize;
+  }
+
+  .menu-item.active {
+    color: var(--color-coral);
   }
 
   .menu-list a {

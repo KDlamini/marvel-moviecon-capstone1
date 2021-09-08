@@ -10,7 +10,7 @@
     <script defer src="../main.js"></script>
     <title>About us</title>
 </head>
-<body class="d-flex">
+<body class="d-flex aboutpage">
     <!-- Navigation Panel -->
     <header class="d-flex flex-stretch">
         <ul class="toplinks d-flex flex-stretch">
@@ -33,11 +33,13 @@
                 </div>
             </div>
             <ul class="menu-list d-flex">
-                <li><a href="../pages/about.html">About</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Sponsor</a></li>
-                <li><a href="#">News</a></li>
+                <li class="menu-close-btn"><i class="times menu-item"></i></li>
+                <li><a class="menu-item home" href="../index.html">Home</a></li>
+                <li><a class="menu-item active" href="../pages/about.html">About</a></li>
+                <li><a class="menu-item" href="../index.html#program">Program</a></li>
+                <li><a class="menu-item" href="#">Join</a></li>
+                <li><a class="menu-item" href="../pages/about.html#sponsor">Sponsor</a></li>
+                <li><a class="menu-item" href="#">News</a></li>
                 <li>
                     <button type="button" class="campaign-btn">Get Tickets</button>
                 </li>
@@ -66,7 +68,7 @@
     </section>
 
     <!-- Sponsor Logo Section -->
-    <section class="sponsor-container d-flex flex-stretch">
+    <section class="sponsor-container d-flex flex-stretch" id="sponsor">
         <h2 class="sponsor-heading">Marvel Cinematic Universe event main sponsor</h2>
         <p class="sponsor-description">Disney+ is an American subscription video on-demand over-the-top streaming service owned and operated by the Media and Entertainment Distribution division of The Walt Disney Company.
             The service primarily distributes films and television series produced by The Walt Disney Studios and Walt Disney Television, with dedicated content hubs for brands such as 
