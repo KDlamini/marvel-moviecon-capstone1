@@ -2,6 +2,7 @@
   --color-dark: #272a31;
   --color-coral: #ec5242;
   --text-coral: #f44c06;
+  --color-white: #fff;
   --bg-gray: #d3d3d3;
   --text-gray: #909090;
   --text-darkgray: #565656;
@@ -10,6 +11,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   height: auto;
   font-family: Lato, sans-serif;
   font-style: normal;
@@ -23,7 +25,7 @@ body {
 
 .banner-content h1 {
   text-align: center;
-  background: var(--color-coral);
+  background: linear-gradient(90deg, rgba(236,82,66,1) 0%, rgba(255,0,0,1) 100%);
   background-clip: content-box;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -57,6 +59,27 @@ body {
   display: none;
 }
 
+/* Sponsor Logo Section Mobile*/
+.sponsor-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  color: var(--text-darkgray);
+}
+
+.sponsor-heading {
+  padding: 10px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.sponsor-description {
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+
 /* About Footer Section Mobile */
 .footer {
   margin: 0;
@@ -64,6 +87,10 @@ body {
 
 @media only screen and (min-width: 768px) {
   /* Desktop [768px -> 1220px] */
+  .banner::before {
+    background: url("../images/phase-4-marvel-slate-bg2.jpg");
+  }
+
   .banner-greeting,
   .partners {
     display: none;
@@ -79,6 +106,6 @@ body {
   }
 
   .bottom-footer-text {
-    color: #fff;
+    color: var(--color-white);
   }
 }

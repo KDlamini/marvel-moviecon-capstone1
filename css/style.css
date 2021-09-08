@@ -4,6 +4,7 @@
   --color-dark: #272a31;
   --color-coral: #ec5242;
   --text-coral: #f44c06;
+  --color-white: #fff;
   --bg-gray: #d3d3d3;
   --text-gray: #909090;
   --text-darkgray: #565656;
@@ -13,6 +14,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   height: auto;
   font-family: Lato, sans-serif;
   font-style: normal;
@@ -36,7 +38,7 @@ header {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #fff;
+  background: var(--color-white);
   z-index: 3;
 }
 
@@ -66,9 +68,9 @@ header {
 .banner {
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-height: 100vh;
-  margin-top: 13vh;
-  background-color: rgb(211, 211, 211, 0.8);
+  margin-top: 12vh;
 }
 
 .banner-content {
@@ -123,7 +125,7 @@ header {
   justify-content: space-between;
   height: auto;
   padding: 50px 20px;
-  color: #fff;
+  color: var(--color-white);
   background: var(--color-dark);
 }
 
@@ -140,6 +142,16 @@ header {
   list-style: none;
   padding: 12px;
   background: #3c3f46;
+  border: 2px solid #3c3f46;
+}
+
+.program-card:hover {
+  background: rgba( 60, 63, 70, 0.8 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 2px;
+  border: 2px solid var(--color-white);
 }
 
 .program-image {
@@ -162,12 +174,18 @@ header {
 
 .program-btn {
   font-weight: 600;
-  color: #fff;
+  color: var(--color-white);
   font-size: 20px;
   margin-top: 20px;
   padding: 20px 40px;
   background: var(--color-coral);
   border: none;
+}
+
+.program-btn:hover {
+  color: var(--color-coral);
+  background: var(--color-white);
+  border: 2px solid var(--color-coral);
 }
 
 /* Featured Creators Section Mobile */
@@ -177,7 +195,6 @@ header {
 
 .featured-creators h2 {
   text-align: center;
-  font-size: 1.75rem;
   padding: 40px 0 20px 0;
 }
 
@@ -329,12 +346,20 @@ header {
     height: 100%;
     font-weight: 700;
     font-size: 12px;
-    color: #fff;
+    color: var(--color-white);
     text-transform: capitalize;
   }
 
   .toplinks-item a {
-    color: #fff;
+    color: var(--color-white);
+  }
+
+  .toplinks-item .twitter.icon:hover {
+    color: #1c9cea;
+  }
+
+  .toplinks-item .facebook.icon:hover {
+    color: #1a73ea;
   }
 
   .toplinks-item .icon {
@@ -344,10 +369,10 @@ header {
   }
 
   .toplinks-item:hover,
-  .toplinks-item .icon,
-  .logo-container,
-  .menu-list li,
-  .campaign-btn {
+  .toplinks-item .icon:hover,
+  .logo-container:hover,
+  .menu-list li:hover,
+  .campaign-btn:hover {
     cursor: pointer;
   }
 
@@ -376,11 +401,17 @@ header {
 
   .menu-list a {
     color: var(--text-gray);
+    padding: 5px;
+  }
+
+  .menu-list a:hover,
+  .program-see-more:hover {
+    color: var(--color-coral);
   }
 
   .main-program a {
     display: block;
-    color: #fff;
+    color: var(--color-white);
     text-decoration: underline;
   }
 
@@ -399,15 +430,22 @@ header {
   }
 
   .campaign-btn {
+    font-weight: 600;
     color: var(--color-coral);
     border: 2px solid var(--color-coral);
     padding: 8px 12px;
     background: none;
   }
 
+  .campaign-btn:hover {
+    color: var(--color-white);
+    background: var(--color-coral);
+  }
+
   .banner {
     margin-top: 11vh;
     min-height: 87vh;
+    background-color: rgb(211, 211, 211, 0.8);
   }
 
   .banner::before {
@@ -472,8 +510,8 @@ header {
 
   .program-card {
     flex-direction: column;
-    width: 180px;
-    height: 220px;
+    width: 182px;
+    height: 222px;
   }
 
   .program-image {
