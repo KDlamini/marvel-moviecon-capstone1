@@ -545,3 +545,9 @@ header {
     flex: 2;
   }
 }
+
+@media only screen and (max-width: 380px) {
+  .bottom-footer {
+    flex-direction: column;
+  }
+}

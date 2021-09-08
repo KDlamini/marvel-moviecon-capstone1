@@ -60,7 +60,9 @@ body {
 }
 
 /* Sponsor Logo Section Mobile*/
-.sponsor-container {
+/* Past Events Section Mobile */
+.sponsor-container,
+.past-events-container {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
@@ -68,16 +70,48 @@ body {
   color: var(--text-darkgray);
 }
 
-.sponsor-heading {
+.sponsor-container {
+  background: var(--bg-gray);
+}
+
+.sponsor-heading,
+.past-events-heading {
   padding: 10px;
   text-align: center;
   color: var(--color-dark);
 }
 
-.sponsor-description {
+.sponsor-description,
+.past-events-description {
   width: 60%;
   padding: 10px;
   text-align: center;
+}
+
+.past-events-cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  padding: 0 4vw;
+}
+
+.past-event-card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  max-width: 350px;
+  max-height: 180px;
+  padding: 20px;
+  background: var(--color-coral);
+}
+
+.past-event-card h3,
+.past-event-card p {
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-white);
 }
 
 /* About Footer Section Mobile */
@@ -98,6 +132,22 @@ body {
 
   .banner-description {
     width: 80%;
+  }
+
+  /* Sponsor Logo Section Mobile*/
+  .sponsor-container {
+    background: none;
+  }
+
+  /* Past Events Section Desktop */
+  .past-events-container {
+    background: var(--bg-gray);
+  }
+  
+  .past-events-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
   }
 
   /* About Footer Section Desktop */
