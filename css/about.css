@@ -25,7 +25,7 @@ body {
 
 .banner-content h1 {
   text-align: center;
-  background: linear-gradient(90deg, rgba(236,82,66,1) 0%, rgba(255,0,0,1) 100%);
+  background: linear-gradient(90deg, #ec5242 0%, #f00 100%);
   background-clip: content-box;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -59,7 +59,8 @@ body {
   display: none;
 }
 
-/* Sponsor Logo Section Mobile*/
+/* Sponsor Logo Section Mobile */
+
 /* Past Events Section Mobile */
 .sponsor-container,
 .past-events-container {
@@ -134,7 +135,7 @@ body {
     width: 80%;
   }
 
-  /* Sponsor Logo Section Mobile*/
+  /* Sponsor Logo Section Mobile */
   .sponsor-container {
     background: none;
   }
@@ -143,7 +144,7 @@ body {
   .past-events-container {
     background: var(--bg-gray);
   }
-  
+
   .past-events-cards {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;

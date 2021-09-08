@@ -65,6 +65,14 @@ header {
   margin-top: 20px;
 }
 
+.campaign-btn {
+  font-weight: 600;
+  color: var(--color-coral);
+  border: 2px solid var(--color-coral);
+  padding: 8px 12px;
+  background: none;
+}
+
 .banner {
   align-items: center;
   justify-content: center;
@@ -146,10 +154,10 @@ header {
 }
 
 .program-card:hover {
-  background: rgba( 60, 63, 70, 0.8 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  background: rgba(60, 63, 70, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 2px;
   border: 2px solid var(--color-white);
 }
@@ -399,14 +407,19 @@ header {
     text-transform: uppercase;
   }
 
+  .menu-list {
+    flex: 1.8;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    padding-right: 12vw;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
   .menu-list a {
     color: var(--text-gray);
     padding: 5px;
-  }
-
-  .menu-list a:hover,
-  .program-see-more:hover {
-    color: var(--color-coral);
   }
 
   .main-program a {
@@ -419,27 +432,14 @@ header {
     color: var(--color-dark);
   }
 
-  .menu-list {
-    flex: 1.8;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 700;
-    padding-right: 12vw;
-    margin: 0;
-    text-transform: capitalize;
-  }
-
-  .campaign-btn {
-    font-weight: 600;
-    color: var(--color-coral);
-    border: 2px solid var(--color-coral);
-    padding: 8px 12px;
-    background: none;
-  }
-
   .campaign-btn:hover {
     color: var(--color-white);
     background: var(--color-coral);
+  }
+
+  .menu-list a:hover,
+  .program-see-more:hover {
+    color: var(--color-coral);
   }
 
   .banner {
@@ -548,6 +548,6 @@ header {
 
 @media only screen and (max-width: 380px) {
   .bottom-footer {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
