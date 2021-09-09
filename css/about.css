@@ -1,0 +1,162 @@
+:root {
+  --color-dark: #272a31;
+  --color-coral: #ec5242;
+  --text-coral: #f44c06;
+  --color-white: #fff;
+  --bg-gray: #d3d3d3;
+  --text-gray: #909090;
+  --text-darkgray: #565656;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  flex-direction: column;
+}
+
+/* About home Section Mobile */
+.banner-content {
+  text-align: center;
+}
+
+.banner-content h1 {
+  text-align: center;
+  background: linear-gradient(90deg, #ec5242 0%, #f00 100%);
+  background-clip: content-box;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.banner-content h4 {
+  margin-top: 0;
+}
+
+.banner-content h4 .chevron.icon {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+}
+
+.banner-description {
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.banner-description,
+.banner-contact-info {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.banner-contact-info {
+  margin-bottom: 0;
+}
+
+.banner::after {
+  display: none;
+}
+
+/* Sponsor Logo Section Mobile */
+
+/* Past Events Section Mobile */
+.sponsor-container,
+.past-events-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  color: var(--text-darkgray);
+}
+
+.sponsor-container {
+  background: var(--bg-gray);
+}
+
+.sponsor-heading,
+.past-events-heading {
+  padding: 10px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.sponsor-description,
+.past-events-description {
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+
+.past-events-cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  padding: 0 4vw;
+}
+
+.past-event-card {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  max-width: 350px;
+  max-height: 180px;
+  padding: 20px;
+  background: var(--color-coral);
+}
+
+.past-event-card h3,
+.past-event-card p {
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-white);
+}
+
+/* About Footer Section Mobile */
+.footer {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Desktop [768px -> 1220px] */
+  .banner::before {
+    background: url("../images/phase-4-marvel-slate-bg2.jpg");
+  }
+
+  .banner-greeting,
+  .partners {
+    display: none;
+  }
+
+  .banner-description {
+    width: 80%;
+  }
+
+  /* Sponsor Logo Section Desktop */
+  .sponsor-container {
+    background: none;
+  }
+
+  /* Past Events Section Desktop */
+  .past-events-container {
+    background: var(--bg-gray);
+  }
+
+  .past-events-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
+  }
+
+  /* About Footer Section Desktop */
+  .bottom-footer {
+    background: var(--color-dark);
+  }
+
+  .bottom-footer-text {
+    color: var(--color-white);
+  }
+}

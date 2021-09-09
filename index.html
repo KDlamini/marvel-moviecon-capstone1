@@ -4,11 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script defer src="./main.js"></script>
     <title>Marvel Studios MovieCon</title>
 </head>
-<body>
-    
+<body class="d-flex homepage">
+    <!-- Navigation Panel -->
+    <header class="d-flex flex-stretch">
+        <ul class="toplinks d-flex flex-stretch">
+            <li class="toplinks-item social-links d-flex">
+                <a href="https://twitter.com/MarvelStudios"><i class="twitter icon"></i></a>
+                <a href="https://www.facebook.com/marvelstudios/"><i class="facebook f icon"></i></a>
+            </li>
+            <li class="toplinks-item d-flex"><a href="#">English</a></li>
+            <li class="toplinks-item d-flex"><a href="#">My Page</a></li>
+            <li class="toplinks-item d-flex"><a href="#">Logout</a></li>
+        </ul>
+        <nav class="navlinks d-flex flex-stretch">
+            <div class="logo-menu-wrapper d-flex">
+                <div class="logo-container d-flex">
+                    <a href="./index.html"><img src="./images/Marvel-mcu.png" alt="Marvel Studio logo"></a>
+                    <p class="logo-text d-flex"><a href="./index.html">MOVIECON</a></p>
+                </div>
+                <div class="hamburger">
+                    <i class="bars icon"></i>
+                </div>
+            </div>
+            <ul class="menu-list d-flex">
+                <li class="menu-close-btn"><i class="times menu-item"></i></li>
+                <li><a class="menu-item home" href="./index.html">Home</a></li>
+                <li><a class="menu-item" href="./pages/about.html">About</a></li>
+                <li><a class="menu-item" href="./index.html#program">Program</a></li>
+                <li><a class="menu-item" href="./pages/join.html">Join</a></li>
+                <li><a class="menu-item" href="./pages/news.html">News</a></li>
+                <li>
+                    <button type="button" class="campaign-btn">Get Tickets</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <section class="banner d-flex flex-stretch">
+        <div class="banner-content">
+            <p class="banner-greeting">"Marvel Celebrates Movies!"</p>
+            <h1>
+                MARVEL CINEMATIC UNIVERSE<br>
+                PHASE 4 EXPANSION<br>
+                2021
+            </h1>
+            <p class="banner-description">The Walt Disney Company plans to release more than 30 originals from its Marvel, Lucasfilm, and Disney animation arms over the next several years.
+                The Marvel MovieCon will be an exiting event for Marvel fans to have an open discussion about the next phase of the MCU.
+            </p>
+            <h2>2021-11-26(FRI) ~ 27(SAT)</h2>
+            <h4>@ San Diego Convention Center, California, USA</h4>
+        </div>
+    </section>
+
+    <!-- Main Program Section -->
+    <section class="main-program d-flex flex-stretch" id="program">
+        <h2 class="program-header">Main Program</h2>
+        <div class="program-card-wrapper d-flex">
+            <ul class="program-card d-flex">
+                <li class="program-image">
+                    <i class="user icon"></i>
+                </li>
+                <li class="program-title"><h3>Actors Panel</h3></li>
+                <li class="program-text">Sit with your favorite celebrities that will feature in the next movies 
+                    and ask questions about their experiences.
+                </li>
+            </ul>
+
+            <ul class="program-card d-flex">
+                <li class="program-image">
+                    <i class="film icon"></i>
+                </li>
+                <li class="program-title"><h3>Slate Exhibition</h3></li>
+                <li class="program-text">Meet with Kevin Feige where he will be revealing new and exciting upcoming content
+                    on both the big screen and on Disney+.
+                </li>
+            </ul>
+
+            <ul class="program-card d-flex">
+                <li class="program-image">
+                    <i class="comments icon"></i>
+                </li>
+                <li class="program-title"><h3>Forum</h3></li>
+                <li class="program-text">Have the time to share your thoughts and opinions with movie writers, directors, as well as 
+                    other fans about what's next in phase 4.
+                </li>
+            </ul>
+            <ul class="program-card d-flex">
+                <li class="program-image">
+                    <i class="users icon"></i>
+                </li>
+                <li class="program-title"><h3>Costume Party</h3></li>
+                <li class="program-text">Dress up as your favourite character and celebrate their heroism with your family and friends in a fun
+                    and colorful Marvel theme.
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="program-see-more">SEE THE WHOLE PROGRAM</a>
+        <button type="button" class="program-btn">Join MovieCon Panel</button>
+    </section>
+
+    <!-- Featured Creators Section -->
+    <section class="featured-creators d-flex">
+        <h2 class="flex-stretch">Featured Creators</h2>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer flex-stretch">
+        <div class="partners">
+            <h2 class="partner-heading">Partner</h2>
+            <div class="partner-logo-wrapper d-flex">
+                <img class="partner-logo" src="./images/Disney+_logo.png" alt="Disney Plus logo">
+                <img class="partner-logo" src="./images/Pixar-logo.jpg" alt="Pixar animations logo">
+                <img class="partner-logo" src="./images/lucasfilm-logo.jpg" alt="Lucasfilm logo">
+                <img class="partner-logo" src="./images/national-geographic-logo.png" alt="National geographic logo">
+            </div>
+        </div>
+        <div class="bottom-footer d-flex">
+            <div class="bottom-footer-logo d-flex">
+                <img class="partner-logo" src="./images/Marvel-Studios-logo.png" alt="Marvel Studios logo">
+            </div>
+            <div class="bottom-footer-text d-flex">
+                <h4>2021 San Diego Convention Center. Some rights reserved.</h4>
+                <p>Disney corporation in association with Marvel entertainment.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,57 @@
+:root {
+  --color-dark: #272a31;
+  --color-coral: #ec5242;
+  --text-coral: #f44c06;
+  --color-white: #fff;
+  --bg-gray: #d3d3d3;
+  --text-gray: #909090;
+  --text-darkgray: #565656;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  flex-direction: column;
+}
+
+/* Join home Section Mobile */
+.banner-content {
+  text-align: center;
+}
+
+.banner-greeting {
+  text-align: center;
+}
+
+.banner::after {
+  display: none;
+}
+
+/* Join Footer Section Mobile */
+.footer {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Desktop [768px -> 1220px] */
+  .banner::before {
+    background: none;
+  }
+
+  .partners {
+    display: none;
+  }
+
+  /* Join Footer Desktop */
+  .bottom-footer {
+    background: var(--color-dark);
+  }
+
+  .bottom-footer-text {
+    color: var(--color-white);
+  }
+}

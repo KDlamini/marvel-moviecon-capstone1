@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --color-dark: #272a31;
+  --color-coral: #ec5242;
+  --text-coral: #f44c06;
+  --color-white: #fff;
+  --bg-gray: #d3d3d3;
+  --text-gray: #909090;
+  --text-darkgray: #565656;
+}
+
+/* Mobile First Design Homepage */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  flex-direction: column;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-stretch {
+  align-self: stretch;
+}
+
+/* Homepage */
+header {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--color-white);
+  z-index: 3;
+}
+
+.toplinks,
+.menu-list,
+.creators-list {
+  list-style: none;
+}
+
+.toplinks,
+.logo-container,
+.menu-list,
+.main-program a {
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 55px;
+  color: var(--text-darkgray);
+  padding: 18px 0 0 6vw;
+  margin-top: 20px;
+}
+
+.campaign-btn {
+  font-weight: 600;
+  color: var(--color-coral);
+  border: 2px solid var(--color-coral);
+  padding: 8px 12px;
+  background: none;
+}
+
+.menu-list.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  color: var(--color-white);
+  background: var(--color-dark);
+  animation: slide-in 0.8s ease-in-out both;
+}
+
+.menu-list.active .campaign-btn {
+  display: none;
+}
+
+.menu-list.active li {
+  margin: 15px 0;
+}
+
+.menu-list.active .menu-close-btn {
+  width: 100%;
+  padding: 20px 40px;
+  text-align: right;
+}
+
+.menu-list .times.icon {
+  font-size: 32px;
+}
+
+.menu-list.active a {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.menu-list.active a:hover {
+  color: var(--color-coral);
+}
+
+.banner {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 12vh;
+}
+
+.banner-content {
+  flex: 0.8;
+  height: auto;
+  padding: 40px 0;
+  font-weight: 700;
+  color: var(--text-darkgray);
+  z-index: 2;
+}
+
+.banner-content h1 {
+  font-weight: 900;
+  color: var(--text-coral);
+  background: url("../images/marvel-cinematic-universe-heroes3.jpg") no-repeat center center;
+  background-size: cover;
+  background-clip: content-box;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.banner-content h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.banner-content h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-greeting {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-coral);
+}
+
+.banner-description {
+  width: 100%;
+  padding: 10px 20px;
+  border: 2px solid #dbdbdb;
+}
+
+/* Main Program Section Mobile */
+.main-program {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  padding: 50px 20px;
+  color: var(--color-white);
+  background: var(--color-dark);
+}
+
+.program-card-wrapper {
+  flex-direction: column;
+}
+
+.program-card {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5px;
+  list-style: none;
+  padding: 12px;
+  background: #3c3f46;
+  border: 2px solid #3c3f46;
+}
+
+.program-card:hover {
+  background: rgba(60, 63, 70, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 2px;
+  border: 2px solid var(--color-white);
+}
+
+.program-image {
+  font-size: 32px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.program-title {
+  width: 35%;
+  text-align: center;
+  padding: 5px;
+  color: var(--color-coral);
+}
+
+.program-text {
+  width: 50%;
+  text-align: left;
+}
+
+.program-btn {
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 20px 40px;
+  background: var(--color-coral);
+  border: none;
+}
+
+.program-btn:hover {
+  color: var(--color-coral);
+  background: var(--color-white);
+  border: 2px solid var(--color-coral);
+}
+
+/* Featured Creators Section Mobile */
+.featured-creators {
+  flex-direction: column;
+}
+
+.featured-creators h2 {
+  text-align: center;
+  padding: 40px 0 20px 0;
+}
+
+.creators-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 50px;
+  padding: 0 4vw;
+}
+
+.creator {
+  margin: 0;
+}
+
+.creator.hide {
+  display: none;
+}
+
+.creator-img-wrapper {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  max-height: 180px;
+  max-width: 180px;
+  background: url("../images/Disney-slate.png");
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.creator-img-wrapper img {
+  display: block;
+  width: 85%;
+  height: 85%;
+}
+
+.creator-info {
+  flex: 1.8;
+  height: auto;
+  padding: 10px;
+}
+
+.creator-name {
+  font-size: 1.4rem;
+  color: var(--color-dark);
+  margin-bottom: 0;
+}
+
+.creator-title {
+  font-size: 1.1rem;
+  color: var(--color-coral);
+  font-style: italic;
+  margin-top: 0;
+}
+
+.creator-description {
+  color: var(--color-dark);
+}
+
+.more-creators-btn {
+  align-items: center;
+  justify-content: center;
+  margin: auto 4vw;
+  padding: 20px;
+  margin-top: 40px;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  border: 1px solid var(--text-gray);
+  border-radius: 3px;
+}
+
+.more-creators-btn .chevron.icon {
+  color: var(--color-coral);
+  margin: auto 5px;
+}
+
+/* Footer Mobile */
+.footer {
+  margin-top: 50px;
+}
+
+.partners {
+  padding: 40px 0 20px 0;
+  color: var(--text-gray);
+  background: var(--color-dark);
+}
+
+.partner-heading {
+  text-align: center;
+}
+
+.partner-logo-wrapper {
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  width: 200px;
+  height: 70px;
+  margin: 20px 10px;
+}
+
+.bottom-footer {
+  margin: 0;
+  min-height: 150px;
+}
+
+.bottom-footer-logo {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bottom-footer-text {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  color: var(--color-dark);
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Desktop [768px -> 1220px] */
+  .hamburger,
+  .program-btn,
+  .menu-close-btn,
+  .menu-item.home,
+  .more-creators-btn {
+    display: none;
+  }
+
+  .toplinks,
+  .logo-container,
+  .menu-list {
+    display: flex;
+  }
+
+  .toplinks {
+    align-items: center;
+    justify-content: flex-end;
+    height: 25px;
+    margin: 0;
+    padding-right: 12vw;
+    background: var(--color-dark);
+  }
+
+  .toplinks-item {
+    align-items: center;
+    justify-self: center;
+    margin-left: 20px;
+    height: 100%;
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--color-white);
+    text-transform: capitalize;
+  }
+
+  .toplinks-item a {
+    color: var(--color-white);
+  }
+
+  .toplinks-item .twitter.icon:hover {
+    color: #1c9cea;
+  }
+
+  .toplinks-item .facebook.icon:hover {
+    color: #1a73ea;
+  }
+
+  .toplinks-item .icon {
+    height: 80%;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+  .toplinks-item:hover,
+  .toplinks-item .icon:hover,
+  .logo-container:hover,
+  .menu-list li:hover,
+  .campaign-btn:hover {
+    cursor: pointer;
+  }
+
+  .logo-menu-wrapper {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .logo-menu-wrapper img {
+    width: 100px;
+    height: 40px;
+    margin: 0;
+  }
+
+  .logo-menu-wrapper .logo-text {
+    align-items: center;
+    justify-self: center;
+    margin: 0;
+    padding-right: 5px;
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .menu-list {
+    flex: 1.8;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    padding-right: 12vw;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .menu-item.active {
+    color: var(--color-coral);
+  }
+
+  .menu-list a {
+    color: var(--text-gray);
+    padding: 5px;
+  }
+
+  .main-program a {
+    display: block;
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+
+  .logo-menu-wrapper .logo-text a {
+    color: var(--color-dark);
+  }
+
+  .campaign-btn:hover {
+    color: var(--color-white);
+    background: var(--color-coral);
+  }
+
+  .menu-list a:hover,
+  .program-see-more:hover {
+    color: var(--color-coral);
+  }
+
+  .banner {
+    margin-top: 11vh;
+    min-height: 87vh;
+    background-color: rgb(211, 211, 211, 0.8);
+  }
+
+  .banner::before {
+    content: "";
+    background: url("../images/banner-background.jpg");
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 98vh;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .banner::after {
+    content: "";
+    background: url("../images/Scarlet-no-bg.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 120%;
+    transform: scaleX(-1);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 98vh;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .banner-content {
+    padding: 0;
+  }
+
+  .banner-content h1 {
+    font-size: 48px;
+  }
+
+  .banner-description {
+    width: 60%;
+  }
+
+  /* Main Program Section Desktop */
+  .main-program {
+    height: 480px;
+  }
+
+  .program-header::before {
+    content: "";
+    position: absolute;
+    left: 48%;
+    bottom: -90px;
+    height: 1px;
+    width: 50px;
+    border-bottom: 2px solid var(--color-coral);
+  }
+
+  .program-card-wrapper {
+    flex-direction: row;
+  }
+
+  .program-card {
+    flex-direction: column;
+    width: 182px;
+    height: 222px;
+  }
+
+  .program-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .program-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .program-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Featured Creators Section Desktop */
+  .creators-list {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding: 0 10vw;
+  }
+
+  .creator.hide {
+    display: flex;
+  }
+
+  /* Footer Desktop */
+  .bottom-footer-logo {
+    flex: 1;
+  }
+
+  .bottom-footer-text {
+    flex: 2;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .bottom-footer {
+    flex-direction: column-reverse;
+  }
+}
