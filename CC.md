@@ -1,6 +1,4 @@
 ## Copyright 2021, [ Simo Nkosi]
-
-#### Original design idea by **Cindy Shin in Behance**.
 <br />
 
 # <p align="center">Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)</p>

@@ -1,5 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
+#### Original design idea by **Cindy Shin in Behance**, in association with the Creative Commons [license](./CC.md) of the design.
+<br />
+
 # Marvel Studios MovieCon
 
 > This project is about Marvel Studios MovieCon conferrence. Marvel Studios updated its slate during Disney Investor Day 2020 on 11 December 2020, where the studio revealed new feature films for theaters and series to release on Disney+. Since then, Marvel fans have been dying to meet with Marvel Studios's president Kevin Feige to discuss openly about the future of the MCU. This website with allow fans to book tickets, see the speakers, view the event schedule, and get more information about the event.
