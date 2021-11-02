@@ -62,8 +62,8 @@ npx eslint ."
 
 👤 **Simo Nkosi**
 
-- GitHub: [@githubhandle](https://github.com/KDlamini)
-- Twitter: [@twitterhandle](https://twitter.com/RealSimoNkosi)
+- GitHub: [@KDlamini](https://github.com/KDlamini)
+- Twitter: [@RealSimoNkosi](https://twitter.com/RealSimoNkosi)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/simo-nkosi-418523180/)
 
 
